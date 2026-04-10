@@ -1,0 +1,10 @@
+turning_circle	458981
+traffic_signals	123456
+crossing	87455
+stop	44886
+motorway_junction	27818
+bus_stop	25646
+turning_loop	24004
+street_lamp	11151
+give_way	5237
+priority	751

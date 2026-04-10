@@ -1,0 +1,10 @@
+place_of_worship	79649
+school	21947
+grave_yard	15849
+restaurant	10473
+fast_food	6888
+fire_station	4378
+fuel	4135
+bench	3851
+post_office	3281
+parking	3189
