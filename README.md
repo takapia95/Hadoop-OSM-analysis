@@ -27,3 +27,13 @@ hadoop jar ...
 
 ## Results
 Top highway values included crossing, motorway_junction, and bus_stop.
+## Additional Analyses
+
+### Amenity Frequency Analysis
+We performed a MapReduce job to compute frequency of amenity types.
+
+### Top 10 Comparison
+We extracted the top 10 most frequent highway and amenity types and visualized them using bar charts.
+
+### Visualization
+Bar charts were generated using Python (matplotlib) to illustrate the distribution of features.
