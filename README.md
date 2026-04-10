@@ -1,39 +1,31 @@
 # Project 2: Large-Scale Data Analysis using Hadoop MapReduce
 
+## Overview
+This project demonstrates large-scale data processing using Hadoop MapReduce. We analyze OpenStreetMap (OSM) data to extract insights about transportation infrastructure and public amenities in the US South region.
+
+---
+
 ## Dataset
-us-south-260408.osm.pbf
+- **Source:** OpenStreetMap (Geofabrik)
+- **File:** `us-south-260408.osm.pbf`
+- **Size:** ~3.7 GB
+- **Description:** Contains geographic and infrastructure data including roads, amenities, and other features.
 
-## Goal
-Analyze OpenStreetMap highway and amenity frequencies using Hadoop MapReduce.
+---
 
-## Preprocessing
-1. Filtered the OSM PBF file with osmium
-2. Exported to JSON
-3. Converted to Hadoop-readable text
+## Objective
+The goal of this project is to:
+- Process large-scale geospatial data using Hadoop MapReduce
+- Perform frequency analysis on infrastructure features
+- Identify dominant patterns in highway and amenity distributions
 
-## Files
-- mapper_highway.py
-- mapper_amenity.py
-- reducer_count.py
-- convert_osm_stream_v2.py
+---
 
-## How to Run
-1. Start Hadoop daemons
-2. Upload sample file to HDFS
-3. Run Hadoop Streaming job
+## Data Preprocessing
+The raw `.osm.pbf` file is not directly suitable for Hadoop Streaming, so preprocessing was performed:
 
-## Sample Command
-hadoop jar ...
+1. Filtered relevant tags (`amenity`, `highway`) using `osmium`
+2. Exported filtered data to JSON format
+3. Converted JSON into line-based text format for Hadoop
 
-## Results
-Top highway values included crossing, motorway_junction, and bus_stop.
-## Additional Analyses
-
-### Amenity Frequency Analysis
-We performed a MapReduce job to compute frequency of amenity types.
-
-### Top 10 Comparison
-We extracted the top 10 most frequent highway and amenity types and visualized them using bar charts.
-
-### Visualization
-Bar charts were generated using Python (matplotlib) to illustrate the distribution of features.
+Example processed record:
